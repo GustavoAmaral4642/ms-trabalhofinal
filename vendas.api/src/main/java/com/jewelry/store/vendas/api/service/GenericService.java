@@ -7,7 +7,7 @@ public interface GenericService<T> {
 
     T get(Long id, String noSuchElementException);
 
-    void save(T item);
+    T save(T item);
 
     void update(T item);
 

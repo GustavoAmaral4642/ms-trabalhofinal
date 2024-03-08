@@ -23,8 +23,8 @@ public class GenericServiceImpl<T, ID, R extends JpaRepository<T, ID>> implement
         return repository.findById((ID) id).orElseThrow(() -> new NoSuchElementException(noSuchElementException + id));
     }
     @Override
-    public void save(T item) {
-        repository.save(item);
+    public T save(T item) {
+        return repository.save(item);
     }
 
     @Override
