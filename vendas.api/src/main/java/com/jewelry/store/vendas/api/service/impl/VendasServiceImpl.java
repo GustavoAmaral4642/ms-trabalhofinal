@@ -47,6 +47,9 @@ public class VendasServiceImpl extends GenericServiceImpl<Vendas, Long, VendasRe
             }
 
             sendNotification.send(vendas);
+
+             
+
             return repository.save(vendas);
 
         } catch (Exception e) {
